@@ -1,0 +1,68 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(*)",
+      "WebSearch",
+      "WebFetch",
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "mcp__*"
+    ],
+    "ask": [
+      "Bash(rm *)",
+      "Bash(del *)",
+      "Bash(rmdir *)",
+      "Bash(rd *)",
+      "Bash(unlink *)",
+
+      "Bash(sudo *)",
+      "Bash(chmod *)",
+      "Bash(chown *)",
+      "Bash(kill *)",
+      "Bash(pkill *)",
+
+      "Bash(curl *)",
+      "Bash(wget *)",
+
+      "Bash(git push *)",
+      "Bash(git push --force *)",
+      "Bash(git reset --hard *)",
+      "Bash(git clean -fd *)",
+
+      "Write(/etc/*)",
+      "Write(/usr/*)",
+      "Write(/bin/*)",
+      "Write(.env)",
+      "Write(**/.env)",
+      "Write(**/secrets/*)",
+
+      "mcp__*__delete*",
+      "mcp__*__remove*",
+      "mcp__*__update*",
+      "mcp__*__execute*",
+      "mcp__*__send*"
+    ],
+    "deny": [
+      "Bash(:(){ :|:& };:)",
+      "Bash(shutdown *)",
+      "Bash(reboot *)",
+      "Bash(poweroff *)"
+    ]
+  },
+  "hooks": {
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '⚠️  Sesión a punto de compactarse. Si querés guardar el contexto pedíselo a Claude antes de continuar.'"
+          }
+        ]
+      }
+    ]
+  },
+  "language": "Español",
+  "voiceEnabled": true
+}
