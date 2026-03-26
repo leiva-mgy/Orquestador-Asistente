@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for dir:*)",
+      "Bash(do)",
+      "Read(//c/Users/leiva.maite/.claude/projects/$dir/**)",
+      "Bash(done)",
+      "Read(//c/Users/leiva.maite/Documents/Proyectos/Experimentales/notebooklm-agent/**)",
+      "Bash(/dev/null echo:*)"
+    ]
+  }
+}

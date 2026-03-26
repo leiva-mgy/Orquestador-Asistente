@@ -1,0 +1,38 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "orchestrator": {
+      "description": "Coordina consultas entre Asana, Google Workspace, RAG y Obsidian",
+      "mode": "primary",
+      "permission": {
+        "task": {
+          "*": "deny",
+          "asana-*": "allow",
+          "workspace-*": "allow",
+          "rag-*": "allow",
+          "obsidian-*": "allow"
+        }
+      }
+    },
+
+    "asana-reader": {
+      "description": "Consulta tareas, proyectos, estados y fechas en Asana",
+      "mode": "subagent"
+    },
+
+    "workspace-reader": {
+      "description": "Busca y resume docs, sheets y archivos de Google Workspace",
+      "mode": "subagent"
+    },
+
+    "rag-manuals": {
+      "description": "Responde sobre manuales internos usando RAG",
+      "mode": "subagent"
+    },
+
+    "obsidian-memory": {
+      "description": "Consulta notas, decisiones y memoria operativa en Obsidian",
+      "mode": "subagent"
+    }
+  }
+}

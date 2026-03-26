@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "Chroma": {
+      "command": "python",
+      "args": ["scripts/chroma_mcp.py", "--stdio"],
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+Proyecto MCP Local
+
+Este documento es un ejemplo breve para validar el flujo de ingesta en Chroma.
+Contiene información mínima sobre el proceso:
+- El servidor MCP expone herramientas de ingesta, búsqueda y listado.
+- Los documentos deben colocarse en la carpeta documentacion/.
+- Cada ingesta asigna metadata que ayuda a filtrar las consultas.
